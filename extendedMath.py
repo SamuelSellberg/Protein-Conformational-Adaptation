@@ -137,13 +137,13 @@ size : integer or list of, tuple of, or array of integers
 function : callable function
     The inner function of the nestled loops. This function must imitate the 
     following; function(indexList,constants,...).
-    The parameter 'indexList' is a list containing the indicies of each 
+    The parameter 'indexList' is a list containing the indices of each 
     dimension, while the parameter 'constants' is simply passed on from the 
     outer 'nestledTensor'-function.
 constants : any, optional
     Object passed on as second parameter to the inner function 'function'.
 varlist : list or array, optional
-    List of initial indicies of the next nestled iteration, 
+    List of initial indices of the next nestled iteration, 
     may leaved empty. Used to add the iterated indexation in each recursive 
     loop of the nestled iteration.
 
@@ -153,7 +153,7 @@ Nothing : NoneType
     No returns alowed in a nestled recursive loop.
     All changes should be handeled in the inner function 'function' by e.g. 
     performing changes inside a tensor by accessing each element by 
-    provision of the indicies.
+    provision of the indices.
 
 See Also
 --------
