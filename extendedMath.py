@@ -130,10 +130,11 @@ Parameters
 ----------
 dimension : integer
     The number of dimensions the iteration should considerate. 
-    Must correspond to the number of elements in 'size'.
+    Must be equal or less to the number of elements in 'size'.
 size : integer or list of, tuple of, or array of integers
     The size of the tensor, i.e. the boundries of the indexation in each 
-    dimension. Must contain as many elements as the number of dimensions.
+    dimension. Must at least contain as many elements as the number 
+    of dimensions.
 function : callable function
     The inner function of the nestled loops. This function must imitate the 
     following; function(indexList,constants,...).
@@ -186,4 +187,3 @@ may be of preffered method.
         for i in range(size[len(size)-dimension]):
             varlist[len(size)-dimension] = i
             nestledTensor(dimension-1,size,function,constants,varlist)
-
